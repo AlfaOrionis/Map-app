@@ -13,7 +13,7 @@ const App = () => {
     setCords(coords);
   };
   useEffect(() => {
-    fetch("http://localhost:3000/get_token")
+    fetch("/get_token")
       .then((res) => res.json())
       .then((res) => setToken(res));
   }, []);
