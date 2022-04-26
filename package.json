@@ -1,0 +1,32 @@
+{
+  "name": "mypage",
+  "version": "1.0.0",
+  "description": "My page ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "author": "Kamil Zając",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlfaOrionis/My-project.git"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "oauth-1.0a": "^2.2.6",
+    "request": "^2.88.2",
+    "xss-clean": "^0.1.1"
+  }
+}
